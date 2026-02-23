@@ -2,7 +2,13 @@ import cv2
 import numpy as np
 img = cv2.imread('images/image.jpeg', 1)
 cv2.imshow('Image', img)
-print(img.shape)
+print("Image shape :",img.shape)
+print("Image size :", img.size)
+b,g,r = cv2.split(img)
+# Splits the image into its Blue, Green, and Red color channels. The split function
+print("Blue channel shape :", b.shape)
+print("Green channel shape :", g.shape) 
+print("Red channel shape :", r.shape)
 key = cv2.waitKey(0)
 # Waits indefinitely until a key is pressed. 0 means wait forever.
 
